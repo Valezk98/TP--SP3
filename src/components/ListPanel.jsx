@@ -4,9 +4,9 @@ export default function ListPanel({ myList, onRemove, onClose }) {
 
   const handleVaciarLista = () => {
 
-    const borrarDeUna = confirm("Estás seguro de borrar tu lista?")
+    const borrarLista = confirm("Estás seguro de borrar tu lista?")
 
-    if (borrarDeUna) {
+    if (borrarLista) {
       myList.forEach((item) => onRemove(item))
     }
   }
