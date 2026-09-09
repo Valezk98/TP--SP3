@@ -28,7 +28,7 @@ export default function useLocalStorage(key, initial) {
         try {
           setValue(JSON.parse(event.newValue))
         } catch {
-          // valor corrupto en otra pestaña: se ignora
+          console.warn(`Error parseando sincronización en key "${key}":`, error)
         }
       }
     }
