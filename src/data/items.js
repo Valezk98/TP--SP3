@@ -179,5 +179,15 @@ export const catalogo = [
     genero: "Comedia, Acción",
     año: 2022,
     destacado: false
+  },
+  {
+    id: 21,
+    imagen: "https://static.wikia.nocookie.net/grand-blue/images/0/00/Anime_Visual.png/revision/latest/scale-to-width/360?cb=20250621092346",
+    nombre: "Grand Blue S3",
+    descripcion: "Tercera temporada de Grand Blue.",
+    genero: "Comedia",
+    año: 2026,
+    destacado: false
+
   }
 ];

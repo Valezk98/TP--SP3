@@ -13,18 +13,10 @@ export default function ListPanel({ myList, onRemove, onClose }) {
 
   return (
 
-    
- 
     <div className="fixed inset-0 bg-bg-900/80 flex items-center justify-center z-20">
-
-
-      <div style={{ backgroundColor: "var(--bg-primary)" }} className="rounded-xl w-full max-w-lg mx-4 max-h-[80vh] flex flex-col">
-
-    
+      <div style={{ backgroundColor: "var(--bg-primary)" }} className="rounded-xl w-full max-w-lg mx-4 max-h-[80vh] flex flex-col">    
         <div style={{ borderBottomColor: "var(--bg-tertiary)" }} className="flex items-center justify-between px-6 py-4 border-b">
           <h2 className="text-xl font-bold text-ambar-400">Mi lista</h2>
-
-
           <button onClick={onClose} style={{ color: "var(--text-secondary)" }} className="hover:text-texto-100 text-2xl leading-none" aria-label="cerrar lista">
             x
           </button>
