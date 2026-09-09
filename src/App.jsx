@@ -31,7 +31,6 @@ export default function App() {
   return (
 
     <div className="min-h-screen bg-bg-900 text-texto-100">
-      {console.log(myList)}
 
       <Navbar count={myList.length} onOpenList={() => setOpen(true)} />
 
