@@ -12,20 +12,20 @@ export default function ItemCard({ item, onToggle, isInList }) {
 
   return (
 
-    <div className="bg-bg-800 rounded-lg shadow-md overflow-hidden flex flex-col">
+    <div style={{ backgroundColor: "var(--bg-primary)" }} className="rounded-lg shadow-md overflow-hidden flex flex-col">
       <img src={anime.imagen} alt={anime.nombre} className="w-full h-48 object-cover" />
       <div className="p-4 flex flex-col flex-1">
         <div className="flex items-center justify-between">
 
-          <h2 className="text-xl font-semibold text-texto-100">{anime.nombre}</h2>
+          <h2 style={{ color: "var(--text-primary)" }} className="text-xl font-semibold">{anime.nombre}</h2>
 
           <img className="w-[10%] hover:scale-115 " src={!destacado ? "/noFav.png" : "/fav.png"} onClick={handleDestacadoClick}/>
 
 
         </div>
-        <p className="text-texto-400 mt-2 text-sm">{anime.descripcion}</p>
-        <p className="text-texto-500 mt-2 text-sm">Género: {anime.genero}</p>
-        <p className="text-texto-500 mb-auto mt-1 text-sm">Año: {anime.año}</p>
+        <p style={{ color: "var(--text-secondary)" }} className="mt-2 text-sm">{anime.descripcion}</p>
+        <p style={{ color: "var(--text-muted)" }} className="mt-2 text-sm">Género: {anime.genero}</p>
+        <p style={{ color: "var(--text-muted)" }} className="mb-auto mt-1 text-sm">Año: {anime.año}</p>
         
         <button onClick={() => onToggle(anime)}
 

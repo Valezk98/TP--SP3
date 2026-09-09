@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { catalogo } from "./data/items"
 import useMyList from "./hooks/useMyList"
+import useLocalStorage from "./hooks/useLocalStorage"
 import Navbar from "./components/Navbar"
 import SearchBar from "./components/SearchBar"
 import ItemList from "./components/ItemList"
@@ -15,6 +16,14 @@ export default function App() {
 
   const { myList, toggle, isInList } = useMyList() // estado de la watchlist
 
+  const [tema, setTema] = useLocalStorage("AniWatch:tema", 
+    localStorage.getItem("AniWatch:tema") 
+      ?? (matchMedia("(prefers-color-scheme: dark)").matches ? "oscuro" : "claro")
+  )
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", tema === "oscuro")
+  }, [tema])
 
   useEffect(() => {
     const titulo = myList.length === 0 ?'AniWatch' : `AniWatch - (${myList.length})`;
@@ -30,9 +39,9 @@ export default function App() {
   
   return (
 
-    <div className="min-h-screen bg-bg-900 text-texto-100">
+    <div style={{ backgroundColor: "var(--bg-primary)", color: "var(--text-primary)" }} className="min-h-screen">
 
-      <Navbar count={myList.length} onOpenList={() => setOpen(true)} />
+      <Navbar count={myList.length} onOpenList={() => setOpen(true)} tema={tema} onToggleTema={() => setTema(tema === "oscuro" ? "claro" : "oscuro")} />
 
       <SearchBar busqueda={busqueda} enBusqueda={setBusqueda} />
 

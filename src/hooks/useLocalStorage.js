@@ -16,7 +16,7 @@ export default function useLocalStorage(key, initial) {
 
   // Cada vez que cambia el valor, se actualiza en localStorage para no perder la lista.
   useEffect(() => {
-    window.localStorage.setItem(key, JSON.stringify(value))
+    localStorage.setItem(key, JSON.stringify(value))
   }, [key, value])
 
   // Sincroniza el estado con otras pestañas: cuando otra pestaña escribe en la

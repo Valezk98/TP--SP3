@@ -6,7 +6,8 @@ export default function SearchBar({ busqueda, enBusqueda }) {
         value={busqueda}
         onChange={(event) => enBusqueda(event.target.value)}
         placeholder="Buscar un anime por nombre..."
-        className="w-full bg-bg-700 border border-bg-600 rounded-lg px-4 py-3 text-texto-100 placeholder-texto-500 focus:outline-none focus:border-ambar-400"
+        style={{ backgroundColor: "var(--bg-secondary)", borderColor: "var(--bg-tertiary)", color: "var(--text-primary)" }}
+        className="w-full border rounded-lg px-4 py-3 placeholder-texto-500 focus:outline-none focus:border-ambar-400"
       />
     </div>
   )

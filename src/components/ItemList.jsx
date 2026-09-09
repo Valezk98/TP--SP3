@@ -6,7 +6,7 @@ export default function ItemList({ items, onToggle, isInList }) {
   if (items.length === 0) {
     return (
       <div className="max-w-6xl mx-auto px-4 py-16 text-center">
-        <p className="text-texto-400 text-lg">No encontramos nada relacionado</p>
+        <p style={{ color: "var(--text-secondary)" }} className="text-lg">No encontramos nada relacionado</p>
       </div>
     )
   }
