@@ -1,4 +1,3 @@
-
 export const catalogo = [
   {
     id: 1,
@@ -7,7 +6,9 @@ export const catalogo = [
     descripcion: "Un grupo de cazarrecompensas viaja por el espacio buscando criminales mientras lidia con su propio pasado.",
     genero: "Acción, Ciencia ficción",
     año: 1998,
-    destacado: true
+    destacado: true,
+    precio: 8466,
+    stock: 12
   },
   {
     id: 2,
@@ -16,7 +17,9 @@ export const catalogo = [
     descripcion: "Monkey D. Luffy emprende un viaje para encontrar el legendario tesoro One Piece y convertirse en el Rey de los Piratas.",
     genero: "Acción, Aventura",
     año: 1999,
-    destacado: false
+    destacado: false,
+    precio: 10504,
+    stock: 25
   },
   {
     id: 3,
@@ -25,7 +28,9 @@ export const catalogo = [
     descripcion: "Un joven ninja busca demostrar su valor y convertirse en el líder de su aldea mientras enfrenta numerosos desafíos.",
     genero: "Acción, Aventura",
     año: 2002,
-    destacado: false
+    destacado: false,
+    precio: 15186,
+    stock: 20
   },
   {
     id: 4,
@@ -34,7 +39,9 @@ export const catalogo = [
     descripcion: "Naruto regresa después de entrenar durante años y se enfrenta a amenazas cada vez mayores junto a sus compañeros.",
     genero: "Acción, Aventura",
     año: 2007,
-    destacado: false
+    destacado: false,
+    precio: 19684,
+    stock: 18
   },
   {
     id: 5,
@@ -43,7 +50,9 @@ export const catalogo = [
     descripcion: "La humanidad lucha por sobrevivir dentro de enormes murallas mientras criaturas gigantes amenazan con destruirla.",
     genero: "Acción, Drama",
     año: 2013,
-    destacado: true
+    destacado: true,
+    precio: 13754,
+    stock: 15
   },
   {
     id: 6,
@@ -52,7 +61,9 @@ export const catalogo = [
     descripcion: "Un joven sin poderes sueña con convertirse en héroe y termina ingresando a una prestigiosa academia.",
     genero: "Acción, Superhéroes",
     año: 2016,
-    destacado: false
+    destacado: false,
+    precio: 8307,
+    stock: 22
   },
   {
     id: 7,
@@ -61,7 +72,9 @@ export const catalogo = [
     descripcion: "Tanjiro se convierte en cazador de demonios para encontrar una cura para su hermana y vengar a su familia.",
     genero: "Acción, Fantasía",
     año: 2019,
-    destacado: true
+    destacado: true,
+    precio: 10126,
+    stock: 10
   },
   {
     id: 8,
@@ -70,7 +83,9 @@ export const catalogo = [
     descripcion: "Un estudiante se ve involucrado en el mundo de las maldiciones y comienza a entrenar para combatirlas.",
     genero: "Acción, Sobrenatural",
     año: 2020,
-    destacado: true
+    destacado: true,
+    precio: 16866,
+    stock: 8
   },
   {
     id: 9,
@@ -79,7 +94,9 @@ export const catalogo = [
     descripcion: "Un estudiante encuentra un cuaderno sobrenatural capaz de matar a cualquier persona cuyo nombre sea escrito en él.",
     genero: "Misterio, Suspenso",
     año: 2006,
-    destacado: true
+    destacado: true,
+    precio: 10195,
+    stock: 30
   },
   {
     id: 10,
@@ -88,7 +105,9 @@ export const catalogo = [
     descripcion: "Dos hermanos alquimistas buscan recuperar sus cuerpos después de un fallido intento de utilizar alquimia prohibida.",
     genero: "Acción, Fantasía",
     año: 2009,
-    destacado: true
+    destacado: true,
+    precio: 18686,
+    stock: 14
   },
   {
     id: 11,
@@ -97,7 +116,9 @@ export const catalogo = [
     descripcion: "Gon emprende un viaje para convertirse en cazador y encontrar a su padre, quien desapareció años atrás.",
     genero: "Acción, Aventura",
     año: 2011,
-    destacado: true
+    destacado: true,
+    precio: 16416,
+    stock: 16
   },
   {
     id: 12,
@@ -106,7 +127,9 @@ export const catalogo = [
     descripcion: "Miles de jugadores quedan atrapados dentro de un videojuego de realidad virtual donde morir significa morir en el mundo real.",
     genero: "Acción, Fantasía",
     año: 2012,
-    destacado: false
+    destacado: false,
+    precio: 15343,
+    stock: 19
   },
   {
     id: 13,
@@ -115,7 +138,9 @@ export const catalogo = [
     descripcion: "Un joven se convierte accidentalmente en mitad humano y mitad ghoul, obligándolo a adaptarse a un mundo desconocido.",
     genero: "Terror, Acción",
     año: 2014,
-    destacado: false
+    destacado: false,
+    precio: 19780,
+    stock: 21
   },
   {
     id: 14,
@@ -124,7 +149,9 @@ export const catalogo = [
     descripcion: "Un grupo de amigos descubre una forma de enviar mensajes al pasado y termina enfrentándose a peligrosas consecuencias.",
     genero: "Ciencia ficción, Suspenso",
     año: 2011,
-    destacado: true
+    destacado: true,
+    precio: 13234,
+    stock: 11
   },
   {
     id: 15,
@@ -133,7 +160,9 @@ export const catalogo = [
     descripcion: "Varias generaciones de la familia Joestar enfrentan enemigos sobrenaturales y aventuras extraordinarias.",
     genero: "Acción, Aventura",
     año: 2012,
-    destacado: false
+    destacado: false,
+    precio: 12654,
+    stock: 17
   },
   {
     id: 16,
@@ -142,7 +171,9 @@ export const catalogo = [
     descripcion: "Adolescentes pilotan enormes mechas para defender a la humanidad mientras enfrentan conflictos personales y existenciales.",
     genero: "Ciencia ficción, Drama",
     año: 1995,
-    destacado: true
+    destacado: true,
+    precio: 14816,
+    stock: 5
   },
   {
     id: 17,
@@ -151,7 +182,9 @@ export const catalogo = [
     descripcion: "Un príncipe exiliado obtiene un poder especial y comienza una rebelión contra el imperio que gobierna su mundo.",
     genero: "Acción, Ciencia ficción",
     año: 2006,
-    destacado: false
+    destacado: false,
+    precio: 18594,
+    stock: 23
   },
   {
     id: 18,
@@ -160,7 +193,9 @@ export const catalogo = [
     descripcion: "Un estudiante apasionado por el voleibol busca superar sus limitaciones y convertirse en un gran jugador.",
     genero: "Deportes, Comedia",
     año: 2014,
-    destacado: false
+    destacado: false,
+    precio: 9180,
+    stock: 28
   },
   {
     id: 19,
@@ -169,7 +204,9 @@ export const catalogo = [
     descripcion: "Saitama se convierte en un héroe tan poderoso que puede derrotar a cualquier enemigo con un solo golpe.",
     genero: "Acción, Comedia",
     año: 2015,
-    destacado: false
+    destacado: false,
+    precio: 10499,
+    stock: 26
   },
   {
     id: 20,
@@ -178,7 +215,9 @@ export const catalogo = [
     descripcion: "Un espía debe formar una familia falsa para completar una misión, sin saber que cada miembro oculta sus propios secretos.",
     genero: "Comedia, Acción",
     año: 2022,
-    destacado: false
+    destacado: false,
+    precio: 9171,
+    stock: 9
   },
   {
     id: 21,
@@ -187,7 +226,8 @@ export const catalogo = [
     descripcion: "Tercera temporada de Grand Blue.",
     genero: "Comedia",
     año: 2026,
-    destacado: false
-
+    destacado: false,
+    precio: 18069,
+    stock: 35
   }
 ];

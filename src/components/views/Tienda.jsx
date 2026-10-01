@@ -1,7 +1,7 @@
-import ItemCard from "./ItemCard"
+import ProductCard from "../ProductCard"
 
 // Acá está la lista de los resultados de la busqueda
-export default function ItemList({ items, onToggle, isInList }) {
+export default function ItemList({ items }) {
   // Si no hay resultados
   if (items.length === 0) {
     return (
@@ -15,7 +15,7 @@ export default function ItemList({ items, onToggle, isInList }) {
     <div className="max-w-6xl mx-auto px-4 pb-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {items.map((item)=>{
-          return <ItemCard key={item.id} item={item} onToggle={onToggle} isInList={isInList}/>
+          return <ProductCard key={item.id} item={item}/>
         })}
       </div>
     </div>

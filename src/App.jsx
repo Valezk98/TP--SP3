@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react"
 import { catalogo } from "./data/items"
-import useMyList from "./hooks/useMyList"
-import useLocalStorage from "./hooks/useLocalStorage"
-import Navbar from "./components/Navbar"
+import { useCarritoContext } from "./context/CarritoContext"
+import { useCheckoutContext } from "./context/CheckoutContext"
+import Navbar from "./components/layout/Navbar"
 import SearchBar from "./components/SearchBar"
-import ItemList from "./components/ItemList"
-import ListPanel from "./components/ListPanel"
-import Footer from "./components/Footer"
+import ItemList from "./components/views/Tienda"
+import Checkout from "./components/views/Checkout"
+import Confirm from "./components/views/Confirmacion"
+import ListPanel from "./components/UI/Carrito"
+import Footer from "./components/layout/Footer"
 
 export default function App() {
 
@@ -14,19 +16,14 @@ export default function App() {
 
   const [open, setOpen] = useState(false) // state de apertura del modal
 
-  const { myList, toggle, isInList } = useMyList() // estado de la watchlist
+  const [confirmado, setConfirmado] = useState(null) // datos del formulario de la compra confirmada
 
-  const [tema, setTema] = useLocalStorage("AniWatch:tema", 
-    localStorage.getItem("AniWatch:tema") 
-      ?? (matchMedia("(prefers-color-scheme: dark)").matches ? "oscuro" : "claro")
-  )
+  const { carrito } = useCarritoContext() // estado del carrito
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", tema === "oscuro")
-  }, [tema])
+  const { checkoutItem, setCheckoutItem } = useCheckoutContext()
 
   useEffect(() => {
-    const titulo = myList.length === 0 ?'AniWatch' : `AniWatch - (${myList.length})`;
+    const titulo = carrito.length === 0 ?'AniWatch' : `AniWatch - (${carrito.length})`;
 
     document.title = titulo
   })
@@ -41,14 +38,22 @@ export default function App() {
 
     <div style={{ backgroundColor: "var(--bg-primary)", color: "var(--text-primary)" }} className="min-h-screen">
 
-      <Navbar count={myList.length} onOpenList={() => setOpen(true)} tema={tema} onToggleTema={() => setTema(tema === "oscuro" ? "claro" : "oscuro")} />
+      <Navbar onOpenList={() => setOpen(true)} />
 
       <SearchBar busqueda={busqueda} enBusqueda={setBusqueda} />
 
-      <ItemList items={filtrados} onToggle={toggle} isInList={isInList} />
+      <ItemList items={filtrados} />
+
+      {checkoutItem && (
+        <Checkout item={checkoutItem} onConfirmado={setConfirmado} onClose={() => setCheckoutItem(null)} />
+      )}
+
+      {confirmado && (
+        <Confirm datos={confirmado} onClose={() => setConfirmado(null)} />
+      )}
 
       {open && (
-        <ListPanel myList={myList} onRemove={toggle} onClose={() => setOpen(false)} />
+        <ListPanel onClose={() => setOpen(false)} />
       )}
 
       <Footer />

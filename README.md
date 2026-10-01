@@ -18,4 +18,4 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## URL
 
-https://aniwatchweb.netlify.app/
+
